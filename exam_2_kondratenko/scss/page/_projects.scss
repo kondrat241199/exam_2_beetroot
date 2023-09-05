@@ -1,0 +1,70 @@
+.about {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    @include flex-column-center;
+    &__title {
+        margin: 140px 0;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: url(../img/line.png);
+            bottom: 75px;
+            left: calc(50% - 50px);
+        }
+    }
+    &__item {
+        margin-bottom: 200px; //???
+        @include flex-row-center;
+        align-items: flex-end;
+    }
+}
+.project {
+    width: 100%;
+    padding: 0 20px;
+    &__img {
+        position: relative;
+        width: 54%;
+        &-back {
+            position: absolute;
+            height: 100%;
+            z-index: 0;
+            top: -60px;
+            left: -30%;
+        }
+        &-main {
+            position: relative;
+            z-index: 10;
+        }
+        & .commerce-center {
+            left: 30%;
+        }
+    }
+    &__text {
+        width: 41%;
+    }
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__disc {
+        margin-bottom: 40px;
+        line-height: 30px;
+    }
+    &__btn {
+        margin-bottom: 60px;
+    }
+    &__location {
+        margin-bottom: 25px;
+        padding-left: 20px;
+        position: relative;
+        font-style: italic;
+        &::before {
+            content: url(../img/svg/location_icon.svg);
+            position: absolute;
+            width: 9px;
+            height: 17px;
+            top: 0px;
+            left: 0px;
+        }
+    }
+}

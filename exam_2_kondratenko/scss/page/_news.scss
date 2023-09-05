@@ -1,0 +1,104 @@
+.news {
+  background: url(../img/news_background.png),
+    linear-gradient(237.1deg, #24ccfa 11.16%, #3c7fd4 89.18%);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  &__title {
+    position: relative;
+    text-align: center;
+    margin-top: 160px;
+    color: #fff;
+    &::before {
+      content: url(../img/line_white.png);
+      position: absolute;
+      bottom: 75px;
+      left: calc(50% - 50px);
+    }
+  }
+  & .container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 120px;
+    & .news-slider {
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      margin: 90px 0;
+      &__item {
+        padding: 0 15px;
+        align-items: center;
+        &-wrapp {
+          height: 550px;
+          background-color: #fff;
+        }
+      }
+      &__text {
+        padding: 30px 20px;
+      }
+      &__title {
+        font-size: 22px;
+        font-family: $title_font;
+        margin-top: 30px;
+      }
+      &__disc {
+        margin-top: 15px;
+      }
+      & .autor {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        &__avatar img {
+          width: 60px;
+          border-radius: 50%;
+        }
+        &__info {
+          margin-left: 20px;
+          font-family: $title_font;
+        }
+        &__date {
+          margin-top: 5px;
+          color: #55b7ff;
+          font-size: 14px;
+        }
+      }
+    }
+    // ----------SLICK--------
+    .slick-track {
+      display: flex;
+    }
+    .slick-arrow {
+      width: 40px;
+      height: 40px;
+      transform: none;
+      transition: 0.4s ease-in-out;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    .slick-next {
+      right: -60px;
+      &::before {
+        content: url(../img/svg/arrow_right.svg);
+      }
+    }
+    .slick-prev {
+      left: -60px;
+      &::before {
+        content: url(../img/svg/arrow_left.svg);
+      }
+    }
+    .slick-dots {
+      bottom: -85px;
+      & li button:before {
+        content: url(../img/svg/dot.svg);
+      }
+    }
+    .slick-dots li.slick-active button:before {
+      content: url(../img/svg/dot_active.svg);
+    }
+  }
+}

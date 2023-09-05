@@ -1,0 +1,97 @@
+.header {
+  height: 100vh;
+  color: #fff;
+  position: relative;
+  &__title {
+    font-size: 80px;
+    font-weight: 700;
+    font-family: $title_font;
+    letter-spacing: 0.1em;
+    line-height: 100px;
+  }
+  &__text {
+    margin-top: 20px;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.3em;
+  }
+  &__arrow {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: calc(50% - 20px);
+    bottom: 50px;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+//----------------SLIDER---------
+
+.header-slider {
+  text-align: center;
+  position: relative;
+  &__item {
+    height: 100vh;
+  }
+  &__img {
+    position: relative;
+    z-index: 0;
+    top: -140px;
+    & img {
+      object-fit: fill;
+      width: auto;
+      height: 100%;
+    }
+    &::before {
+      opacity: 0.88;
+      position: absolute;
+      left: 0px;
+      width: 101%;
+      height: 100%;
+      z-index: 5;
+      content: "";
+      background: linear-gradient(243.43deg, #7e5aff 16.9%, #55b7ff 83.27%);
+    }
+  }
+  &__content {
+    position: relative;
+    z-index: 15;
+    top: calc(50% - 70px);
+  }
+  &__title {
+    font-size: 80px;
+    font-weight: 700;
+    font-family: $title_font;
+    letter-spacing: 0.1em;
+    line-height: 100px;
+  }
+  &__text {
+    margin-top: 20px;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.3em;
+  }
+  &.slick-vertical .slick-slide {
+    height: 100vh;
+  }
+  & .slick-dots {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 210px;
+    z-index: 15;
+    right: 30px;
+    top: calc(50% - 105px);
+    & li button:before {
+      content: url(../img/svg/dot.svg);
+    }
+    & li button:hover {
+      transition: all 0.4s ease-in-out;
+      transform: scale(1.2);
+    }
+    & .slick-active button::before {
+      content: url(../img/svg/dot_active.svg);
+    }
+  }
+}
